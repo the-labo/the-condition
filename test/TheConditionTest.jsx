@@ -47,42 +47,42 @@ describe('the-condition', () => {
     )
     ok(
       render(
-        <TheCondition some={[true, false, false]}>
+        <TheCondition someOf={[true, false, false]}>
           <div>hoge</div>
         </TheCondition>
       )
     )
     ok(
       !render(
-        <TheCondition some={[false, false, false]}>
+        <TheCondition someOf={[false, false, false]}>
           <div>hoge</div>
         </TheCondition>
       )
     )
     ok(
       render(
-        <TheCondition some={[true, false, false]}>
+        <TheCondition someOf={[true, false, false]}>
           <div>hoge</div>
         </TheCondition>
       )
     )
     ok(
       render(
-        <TheCondition all={[true, true, true]}>
+        <TheCondition allOf={[true, true, true]}>
           <div>hoge</div>
         </TheCondition>
       )
     )
     ok(
       !render(
-        <TheCondition all={[true, true, false]}>
+        <TheCondition allOf={[true, true, false]}>
           <div>hoge</div>
         </TheCondition>
       )
     )
     ok(
       !render(
-        <TheCondition all={[false, false, false]}>
+        <TheCondition allOf={[false, false, false]}>
           <div>hoge</div>
         </TheCondition>
       )

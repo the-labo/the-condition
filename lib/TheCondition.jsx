@@ -26,7 +26,7 @@ class TheCondition extends React.Component {
     const s = this
     const {props} = s
 
-    const {if: if_, unless, some, all} = props
+    const {if: if_, unless, someOf, allOf} = props
     if (if_ !== null) {
       if (!if_) {
         return false
@@ -37,14 +37,14 @@ class TheCondition extends React.Component {
         return false
       }
     }
-    if (some !== null) {
-      const hasAny = some.some((bool) => bool)
+    if (someOf !== null) {
+      const hasAny = someOf.some((bool) => bool)
       if (!hasAny) {
         return false
       }
     }
-    if (all !== null) {
-      const hasAll = !all.some((bool) => !bool)
+    if (allOf !== null) {
+      const hasAll = !allOf.some((bool) => !bool)
       if (!hasAll) {
         return false
       }
@@ -58,15 +58,15 @@ TheCondition.Style = TheConditionStyle
 TheCondition.propTypes = {
   if: PropTypes.bool,
   unless: PropTypes.bool,
-  some: PropTypes.arrayOf(PropTypes.bool),
-  all: PropTypes.arrayOf(PropTypes.bool)
+  someOf: PropTypes.arrayOf(PropTypes.bool),
+  allOf: PropTypes.arrayOf(PropTypes.bool)
 }
 
 TheCondition.defaultProps = {
   if: null,
   unless: null,
-  some: null,
-  all: null
+  someOf: null,
+  allOf: null
 }
 
 TheCondition.displayName = 'TheCondition'
