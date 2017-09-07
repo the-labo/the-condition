@@ -1,0 +1,85 @@
+{
+  "TheCondition": {
+    "description": "Conditional renderer for the-components",
+    "displayName": "TheCondition",
+    "methods": [
+      {
+        "name": "shouldRender",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "if": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "unless": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "some": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "bool"
+          }
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "all": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "bool"
+          }
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    }
+  },
+  "TheConditionStyle": {
+    "description": "Style for TheCondition",
+    "displayName": "TheConditionStyle",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style options",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
+  }
+}
