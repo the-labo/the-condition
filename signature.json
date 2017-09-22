@@ -34,7 +34,7 @@
           "computed": false
         }
       },
-      "some": {
+      "someOf": {
         "type": {
           "name": "arrayOf",
           "value": {
@@ -48,7 +48,7 @@
           "computed": false
         }
       },
-      "all": {
+      "allOf": {
         "type": {
           "name": "arrayOf",
           "value": {
