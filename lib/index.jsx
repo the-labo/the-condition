@@ -1,7 +1,7 @@
 /**
  * Conditional renderer for the-components
  * @module the-condition
- * @version 1.0.1
+ * @version 2.0.0
  */
 'use strict'
 
