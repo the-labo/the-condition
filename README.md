@@ -119,10 +119,10 @@ Conditional renderer for the-components
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `if` | bool  |  | `null` |
-| `unless` | bool  |  | `null` |
-| `someOf` | arrayOf bool |  | `null` |
 | `allOf` | arrayOf bool |  | `null` |
+| `if` | bool  |  | `null` |
+| `someOf` | arrayOf bool |  | `null` |
+| `unless` | bool  |  | `null` |
 
 ### TheConditionStyle
 

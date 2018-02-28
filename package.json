@@ -1,7 +1,7 @@
 {
   "name": "the-condition",
   "description": "Conditional renderer for the-components",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": {
     "name": "okunishinishi",
     "email": "okunishinishi@gmail.com",
