@@ -1,13 +1,13 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import c from 'classnames'
-import TheStyle from 'the-style'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { asStyleData } from 'the-component-util'
+import TheStyle from 'the-style'
 
 /** Style for TheCondition */
-const TheConditionStyle = ({id, className, options}) => (
+const TheConditionStyle = ({className, id, options}) => (
   <TheStyle {...{id}}
             className={c('the-condition-style', className)}
             styles={TheConditionStyle.data(options)}
@@ -17,20 +17,20 @@ const TheConditionStyle = ({id, className, options}) => (
 TheConditionStyle.displayName = 'TheConditionStyle'
 TheConditionStyle.propTypes = {
   /** Style options */
-  options: PropTypes.object
+  options: PropTypes.object,
 }
 
 TheConditionStyle.defaultProps = {
-  options: {}
+  options: {},
 }
 
 TheConditionStyle.data = (options) => {
   const {ThemeValues} = TheStyle
   const {
-    dominantColor = ThemeValues.dominantColor
+    dominantColor = ThemeValues.dominantColor,
   } = options
   return asStyleData('.the-condition', {
-    '&': {}
+    '&': {},
   })
 }
 

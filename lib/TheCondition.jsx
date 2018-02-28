@@ -1,32 +1,30 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import c from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { eventHandlersFor, htmlAttributesFor } from 'the-component-util'
 import TheConditionStyle from './TheConditionStyle'
-import { htmlAttributesFor, eventHandlersFor } from 'the-component-util'
 
 /**
  * Conditional renderer for the-components
  */
 class TheCondition extends React.Component {
   render () {
-    const s = this
-    const {props} = s
+    const {props} = this
     const {
-      children
+      children,
     } = props
-    if (!s.shouldRender()) {
+    if (!this.shouldRender()) {
       return null
     }
-    return React.Children.only(children)
+    return children
   }
 
   shouldRender () {
-    const s = this
-    const {props} = s
+    const {props} = this
 
-    const {if: if_, unless, someOf, allOf} = props
+    const {allOf, if: if_, someOf, unless} = props
     if (if_ !== null) {
       if (!if_) {
         return false
@@ -56,17 +54,17 @@ class TheCondition extends React.Component {
 TheCondition.Style = TheConditionStyle
 
 TheCondition.propTypes = {
+  allOf: PropTypes.arrayOf(PropTypes.bool),
   if: PropTypes.bool,
-  unless: PropTypes.bool,
   someOf: PropTypes.arrayOf(PropTypes.bool),
-  allOf: PropTypes.arrayOf(PropTypes.bool)
+  unless: PropTypes.bool,
 }
 
 TheCondition.defaultProps = {
+  allOf: null,
   if: null,
-  unless: null,
   someOf: null,
-  allOf: null
+  unless: null,
 }
 
 TheCondition.displayName = 'TheCondition'
